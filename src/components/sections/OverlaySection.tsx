@@ -1,14 +1,11 @@
-import ContactOverlay from '@/components/ContactOverlay'
-import HeroOverlay from '@/components/HeroOverlay'
 import React, {FunctionComponent} from 'react'
 import { useState, useEffect } from 'react'
-import { heroStyles } from '@/styles/heroStyles'
 import dynamic from 'next/dynamic'
 
-const DynamicHeroOverlay = dynamic(() => import('@/components/HeroOverlay'))
-const DynamicContactOverlay = dynamic(() => import('@/components/ContactOverlay'))
+const DynamicHeroOverlay = dynamic(() => import('@/components/overlays/HeroOverlay'))
+const DynamicContactOverlay = dynamic(() => import('@/components/overlays/ContactOverlay'))
 
-const Main : FunctionComponent= () => {
+const OverlaySection : FunctionComponent = () => {
   const [text, setText] = useState(false)
   const [textStyle, setTextStyle] = useState(false)
   const [overlay, setOverlay] = useState(false)
@@ -36,6 +33,7 @@ const Main : FunctionComponent= () => {
   useEffect(() => {
     window.addEventListener('scroll', changeOverlay, true)
     window.addEventListener('scroll', changeText, true)
+    console.log('overlay on its position')
     return () => {
       window.removeEventListener('scroll', changeOverlay)
       window.removeEventListener('scroll', changeText)
@@ -48,13 +46,16 @@ const Main : FunctionComponent= () => {
     <>
       {!overlay ? <DynamicHeroOverlay/> : <DynamicContactOverlay/>}
       <>
-        <div className={!textStyle ? `${heroStyles.scroll}` : `${heroStyles.scrollBy}`}>
+        <div className={!text 
+        ? 'fixed text-[0.9rem] bottom-[4rem] left-[-0.6rem] flex items-center flex-row-reverse gap-[1rem] rotate-[-90deg] font-regular md:left-[0.9rem]' 
+        : 'fixed text-[0.9rem] bottom-[4.7rem] left-[-1.4rem] flex items-center flex-row-reverse gap-[1rem] rotate-[-90deg] font-regular md:left-[0.2rem]'
+        }>
           <p>{!text ? 'SCROLL' : 'SAY HELLO!'}</p>
-          <span className={`${heroStyles.arrow}`}>←</span>
+          <span>←</span>
         </div>
       </>
     </>
   )
 }
 
-export default Main
+export default OverlaySection

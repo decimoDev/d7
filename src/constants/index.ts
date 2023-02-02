@@ -1,7 +1,9 @@
+import { AboutProps, AwardProps, ShowcaseProps } from "@/interfaces"
+
 export const about : Array<AboutProps> = [
     {
         title : 'Hello',
-        context : 'Hello, I am Marlon Martin a self-taught full-stack developer and an information technology student based in Manila, Philippines. I loved to build certain things that involved science and technology.',
+        context : 'I am Marlon Martin a self-taught full-stack developer and an information technology student based in Manila, Philippines. I loved to build certain things that involved science and technology.',
     },
     {
         title : 'Dynamic',
@@ -9,14 +11,9 @@ export const about : Array<AboutProps> = [
     },
     {
         title : 'Manifesto',
-        context : 'Aims to deploy robust developments that can produce solutions in our environment.',
+        context : 'Aims to deploy robust developments that can produce solutions in the environment.',
     },
 ]
-
-interface AboutProps {
-    title : string
-    context : string
-}
 
 export const award : Array<AwardProps> = [
     {
@@ -36,11 +33,6 @@ export const award : Array<AwardProps> = [
         rank : '1st',
     },
 ]
-
-interface AwardProps {
-    title : string
-    rank : string
-}
 
 export const showcase : Array<ShowcaseProps> = [
     {
@@ -104,10 +96,3 @@ export const showcase : Array<ShowcaseProps> = [
         tech : 'Visual Basic / Microsoft Access'
     },
 ]
-
-interface ShowcaseProps {
-    title : string
-    info : string
-    label : string
-    tech: string
-}

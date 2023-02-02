@@ -1,11 +1,12 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Archivo } from '@next/font/google'
+import { GlobalProps } from '@/interfaces'
 
 const archivo = Archivo({
   subsets : ['latin']
 })
 
-const Layout : FunctionComponent<LayoutProps> = ({children}) => {
+const Layout : FunctionComponent<GlobalProps> = ({children}) => {
   return (
     <>
         <main className={archivo.className}>
@@ -16,7 +17,3 @@ const Layout : FunctionComponent<LayoutProps> = ({children}) => {
 }
 
 export default Layout
-
-interface LayoutProps {
-    children : ReactNode
-}

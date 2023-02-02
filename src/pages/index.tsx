@@ -2,9 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
-const DynamicMainSection = dynamic(() => import('@/sections/Main'))
-const DynamicInfoSection = dynamic(() => import('@/sections/Info'))
-const DynamicContactSection = dynamic(() => import('@/sections/Contact'))
+const DynamicTopSection = dynamic(() => import('@/components/sections/OverlaySection'))
+const DynamicOverlaySection = dynamic(() => import('@/components/sections/InfoSection'))
+const DynamicBottomSection = dynamic(() => import('@/components/sections/ContactSection'))
 
 export default function App () {
   return (
@@ -12,11 +12,9 @@ export default function App () {
       <Head>
         <title>Marlon Martin</title>
       </Head>
-      <section>
-        <DynamicMainSection/>
-        <DynamicInfoSection/>
-        <DynamicContactSection/>
-      </section>
+      <DynamicTopSection/>
+      <DynamicOverlaySection/>
+      <DynamicBottomSection/>
     </>
   )
 }
