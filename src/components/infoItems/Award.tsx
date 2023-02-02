@@ -9,7 +9,7 @@ const Award : FunctionComponent = () => {
                 <ul>
                     {award.map((award, index) => (
                         <li key={index} className=' mt-[0.9rem]'>
-                        <p className='tracking-[0.1rem] md:text-[1.25rem]'><span>{award.rank} </span>{award.title}</p>
+                        <p className='tracking-[0.1rem] font-extralight leading-[1.9rem] md:text-[1.25rem] xl:text-[1.375rem]'><span>{award.rank} </span>{award.title}</p>
                     </li>
                 ))}
             </ul>

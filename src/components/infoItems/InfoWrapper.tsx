@@ -4,7 +4,7 @@ import { GlobalProps } from '@/interfaces'
 const InfoWrapper : FunctionComponent<GlobalProps> = ({children}) => {
   return (
     <>
-        <div className='flex flex-col gap-[1rem] md:flex-col xl:flex-row'>
+        <div className='flex flex-col gap-[1rem] md:flex-col xl:flex-col'>
             {children}
         </div>
     </>

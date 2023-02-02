@@ -47,10 +47,10 @@ const OverlaySection : FunctionComponent = () => {
       {!overlay ? <DynamicHeroOverlay/> : <DynamicContactOverlay/>}
       <>
         <div className={!text 
-        ? 'fixed text-[0.9rem] bottom-[4rem] left-[-0.6rem] flex items-center flex-row-reverse gap-[1rem] rotate-[-90deg] font-regular md:left-[0.9rem]' 
-        : 'fixed text-[0.9rem] bottom-[4.7rem] left-[-1.4rem] flex items-center flex-row-reverse gap-[1rem] rotate-[-90deg] font-regular md:left-[0.2rem]'
+        ? 'fixed text-[0.9rem] bottom-[4rem] left-[-0.6rem] flex items-center flex-row-reverse gap-[1rem] rotate-[-90deg] font-regular md:left-[0rem]' 
+        : 'fixed text-[0.9rem] bottom-[4.5rem] left-[-1.4rem] flex items-center flex-row-reverse gap-[1rem] rotate-[-90deg] font-regular md:left-[-0.4rem]'
         }>
-          <p>{!text ? 'SCROLL' : 'SAY HELLO!'}</p>
+          <p>{!text ? 'SCROLL' : 'PROJECT'}</p>
           <span>←</span>
         </div>
       </>
