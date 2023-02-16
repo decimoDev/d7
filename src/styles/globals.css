@@ -17,8 +17,11 @@ html{
 }
 
 body{
-    background-color: black;
+    background-image: url('/images/meshBg.png');
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
     font-weight: 100;
     -webkit-text-size-adjust: none;
@@ -27,4 +30,20 @@ body{
 
 body::-webkit-scrollbar{
     display: none;
+}
+
+.cta_section{
+    background-image: url('/images/meshBg2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.showcase_section{
+    background-image: url('/images/meshBg2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
