@@ -1,13 +1,15 @@
 import { NextPage } from 'next'
 import React from 'react'
-import Home from '@/components/Home'
 import Container from '@/components/Container'
+import dynamic from 'next/dynamic'
+
+const DynamicHomePage = dynamic(() => import('@/components/Home'));
 
 const App : NextPage = () => {
   return (
     <>
       <Container>
-        <Home />
+        <DynamicHomePage />
       </Container>
     </>
   )
