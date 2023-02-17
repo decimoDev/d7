@@ -50,11 +50,11 @@ const routingTitle = () => {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  const routingTitles = routingTitle();
+  const RoutingTitles = routingTitle();
 
   return (
     <>
-      {routingTitles}
+      {RoutingTitles}
       <Navigations />
       <Layout>
         <Component {...pageProps} />
