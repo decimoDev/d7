@@ -1,8 +1,8 @@
+import { NextPage } from 'next'
 import React from 'react'
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 
-export default function App () {
+const App : NextPage = () => {
   return (
     <>
       <Head>
@@ -11,3 +11,5 @@ export default function App () {
     </>
   )
 }
+
+export default App

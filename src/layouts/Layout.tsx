@@ -1,12 +1,12 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Archivo } from '@next/font/google'
-import { GlobalProps } from '@/interfaces'
+import { LayoutProps } from '@/interfaces'
 
 const archivo = Archivo({
   subsets : ['latin']
 })
 
-const Layout : FunctionComponent<GlobalProps> = ({children}) => {
+const Layout : FunctionComponent<LayoutProps> = ({children}) => {
   return (
     <>
         <main className={archivo.className}>
