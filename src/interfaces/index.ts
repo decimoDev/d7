@@ -8,3 +8,11 @@ export interface NavProps {
     title : String
     link : String
 }
+
+export interface ShowcaseProps {
+    title : String
+}
+
+export interface ContainerProps {
+    children : ReactNode
+}

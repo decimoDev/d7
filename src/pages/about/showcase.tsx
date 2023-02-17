@@ -1,9 +1,14 @@
 import { NextPage } from 'next'
 import React from 'react'
+import Container from '@/components/Container'
 
 const showcase : NextPage = () => {
   return (
-    <div>showcase</div>
+    <>
+      <Container>
+        Showcase
+      </Container>
+    </>
   )
 }
 

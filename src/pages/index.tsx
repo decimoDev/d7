@@ -1,13 +1,14 @@
 import { NextPage } from 'next'
 import React from 'react'
-import Head from 'next/head'
+import Home from '@/components/Home'
+import Container from '@/components/Container'
 
 const App : NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Marlon Martin</title>
-      </Head>
+      <Container>
+        <Home />
+      </Container>
     </>
   )
 }
