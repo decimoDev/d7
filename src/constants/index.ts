@@ -2,19 +2,19 @@ import { NavProps, ShowcaseProps } from "@/interfaces";
 
 export const navLinks : Array<NavProps> = [
     {
-        title : "Home",
+        title : "HOME",
         link : "/"
     },
     {
-        title : "Info",
+        title : "INFO",
         link : "/about/info"
     },
     {
-        title : "Showcase",
+        title : "SHOWCASE",
         link : "/about/showcase"
     },
     {
-        title : "Contact",
+        title : "CONTACT",
         link : "/about/contact"
     },
 ]
