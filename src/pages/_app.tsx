@@ -4,6 +4,7 @@ import Layout from '@/layouts/Layout'
 import Navigations from '@/components/Navigations'
 import Title from '@/components/Title'
 import { AnimatePresence, motion } from 'framer-motion'
+import TogglerNav from '@/components/TogglerNav'
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
