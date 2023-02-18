@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import React, { FunctionComponent } from 'react'
+import Box from './Box'
 
 const Nav : FunctionComponent = () => {
   return (
     <>
-        <nav className='fixed flex flex-row justify-between w-full top-[1rem] items-center px-[1rem]'>
-            <span className='block h-[30px] w-[30px] bg-blue-900'></span>
-            <Link href='/'>ARCHIVE</Link>
+        <nav className='fixed flex flex-row w-full top-[1rem] justify-end px-[1rem]'>
+            <div className='flex flex-col items-end md:flex-row md:gap-[2rem]'>
+              <Link href='/projects'>ARCHIVE</Link>
+              <Link href='/info'>INFO</Link>
+            </div>
         </nav>
     </>
   )

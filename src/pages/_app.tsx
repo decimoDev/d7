@@ -3,11 +3,13 @@ import type { AppProps } from 'next/app'
 import Layout from '@/layouts/Layout'
 import Title from '@/components/Title'
 import { AnimatePresence, motion } from 'framer-motion'
+import Box from '@/components/Box'
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Title />
+      <Box />
       <AnimatePresence mode='wait'>
         <motion.div key={router.route}       
           initial={{ opacity: 0 }}

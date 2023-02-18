@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import { Archivo } from '@next/font/google'
 import { LayoutProps } from '@/interfaces'
+import Box from '@/components/Box'
 
 const archivo = Archivo({
   subsets : ['latin']
