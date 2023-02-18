@@ -3,10 +3,10 @@ import { navLinks } from '@/constants'
 import Link from 'next/link'
 import { useState } from 'react'
 import TogglerNav from './TogglerNav'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Navigations : FunctionComponent = () => {
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
   
   return (
     <>
@@ -15,8 +15,14 @@ const Navigations : FunctionComponent = () => {
           <span className='h-[1px] w-[35px] bg-black'></span>
           <span className='h-[1px] w-[35px] bg-black'></span>
         </button>
-        <AnimatePresence>
-            {!menu && (<TogglerNav />)}
+          <AnimatePresence>
+            <motion.div
+            key="toggleSidebar"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 500, opacity: 0 }}>
+              {!menu && (<TogglerNav />)}
+            </motion.div>
           </AnimatePresence>
         <nav className=''>
           <ul className='hidden md:flex fixed top-[1rem] left-0 z-10 items-center w-full justify-center gap-[4rem]'>

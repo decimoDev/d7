@@ -13,7 +13,7 @@ const TogglerNav = () => {
     <>
       <AnimatePresence>
         {!toggle && 
-        (<motion.ul className={`${styles.toggler} fixed z-[9] h-screen w-full bg-[#F5F5F5] text-black top-0 left-0 py-[4rem] px-[2rem] text-italic text-[3rem] md:hidden`}
+        (<motion.ul className='fixed z-[9] h-screen w-full bg-[#F5F5F5] text-black top-0 left-0 py-[4rem] px-[2rem] text-italic text-[3rem] flex flex-col justify-between md:hidden'
         key="sidebar"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -25,7 +25,7 @@ const TogglerNav = () => {
               </li>
             ))}
           </div>
-          <div className='fixed bottom-[2rem] right-[2rem]'>
+          <div className=''>
             <p className='text-[1rem]'>Designed & Built</p>
             <p className='text-[1rem]'>by Marlon Martin</p>
           </div>
