@@ -7,6 +7,7 @@ export interface LayoutProps {
 export interface NavProps {
     title : String
     link : String
+    span : String
 }
 
 export interface ShowcaseProps {
