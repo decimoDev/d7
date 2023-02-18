@@ -1,12 +1,28 @@
-import React, { FunctionComponent } from 'react'
+import React, { Fragment, FunctionComponent } from 'react'
+import Link from 'next/link'
 
 const Bio : FunctionComponent = () => {
   return (
-    <>
-        <div className='overflow-hidden text-[2rem] w-full max-w-[1373px] q1:text-[2.7rem] q2:text-[3rem] md:text-[4rem]'>
-            Born in 2003 in Manila, Philippines. I&apos;m on a <span className='font-bold italic'>mission</span> to best represent individuals&apos; interests in my <span className='font-bold italic'>vision</span> and use software developments to turn them into a <span className='font-bold italic'>reality</span>.
+    <Fragment>
+        <div className='p-[1rem] flex flex-col gap-[1rem] items-center uppercase bg-blue-900 w-full md:flex-row md:text-[1.5rem]'>
+          <div className='bg-[#f5f5f5] rounded-lg p-[0.5rem] w-full max-w-[600px] md:p-[2rem]'>
+            I'm on a mission to best represent individuals' interests in my vision and use of developments to turn them into a reality.
+          </div>
+          <div className='flex flex-col gap-3'>
+          <p className='mr-auto'>
+            I'm on a mission to best represent individuals' interests in my vision and use of developments to turn them into a reality.
+          </p>
+          <p className='ml-auto'>DECIMO©2023</p>
+          <p className='ml-auto'>STUDENT AND DEVELOPER</p>
+          <p className='mr-auto'>MADE IN PHILIPPINES</p>
+          </div>
         </div>
-    </>
+        <div className='my-[1rem] px-[1rem] flex flex-row justify-between w-full'>
+          <Link href=''>INSTAGRAM</Link>
+          <Link href=''>GITHUB</Link>
+          <Link href=''>LINKED IN</Link>
+        </div>
+    </Fragment>
   )
 }
 

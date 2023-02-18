@@ -1,2 +1,2 @@
+export { default as Name } from './Name'
 export { default as Bio } from './Bio'
-export { default as Role } from './Role'
