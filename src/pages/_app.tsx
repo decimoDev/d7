@@ -3,15 +3,23 @@ import type { AppProps } from 'next/app'
 import Layout from '@/layouts/Layout'
 import Navigations from '@/components/Navigations'
 import Title from '@/components/Title'
+import { AnimatePresence, motion } from 'framer-motion'
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Title />
       <Navigations />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <AnimatePresence mode='wait'>
+        <motion.div key={router.route}       
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </motion.div>
+      </AnimatePresence>
     </>
   )
 }
