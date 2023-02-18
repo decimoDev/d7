@@ -23,7 +23,7 @@ const Navigations : FunctionComponent = () => {
               ))}
             </div>
             <div className='fixed bottom-[2rem] right-[2rem]'>
-              <p className='text-[1rem]'>Designed & Developed</p>
+              <p className='text-[1rem]'>Designed & Built</p>
               <p className='text-[1rem]'>by Marlon Martin</p>
             </div>
           </ul>}
