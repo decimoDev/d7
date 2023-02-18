@@ -14,7 +14,7 @@ const Navigations : FunctionComponent = () => {
           <span className='h-[1px] w-[35px] bg-black'></span>
         </button>
         <nav className=''>
-          {!menu ? null : <ul className='absolute z-[9] h-screen w-full bg-[#F5F5F5] text-black top-0 left-0 py-[4rem] px-[2rem] flex flex-col justify-between text-italic text-[3rem] md:hidden'>
+          {!menu ? null : <ul className='fixed z-[9] h-screen w-full bg-[#F5F5F5] text-black top-0 left-0 py-[4rem] px-[2rem] flex flex-col justify-between text-italic text-[3rem] md:hidden'>
             <div className='flex flex-col gap-[1rem]'>
               {navLinks.map((nav, index) => (
                 <li key={index} className='italic'>
