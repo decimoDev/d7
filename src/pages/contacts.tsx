@@ -9,12 +9,12 @@ const contacts : NextPage = () => {
         <section className='h-screen w-full flex items-center font-bold uppercase flex-col justify-center'>
           <div className='flex flex-col'>
             <p className='mb-[1rem]'>socials</p>
-            {socialContext.map((item) => (
-              <Link href={`${item.link}`}>{item.context}</Link>
+            {socialContext.map((item, index) => (
+              <Link key={index} href={`${item.link}`}>{item.context}</Link>
             ))}
             <p className='my-[1rem]'>playground</p>
-            {playgroundContext.map((item) => (
-              <Link href={`${item.link}`}>{item.context}</Link>
+            {playgroundContext.map((item, index) => (
+              <Link key={index} href={`${item.link}`}>{item.context}</Link>
             ))}
           </div>
         </section>
