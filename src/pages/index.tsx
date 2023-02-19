@@ -1,11 +1,14 @@
+import dynamic from 'next/dynamic'
 import { NextPage } from 'next'
-import React from 'react'
+import React, { Fragment } from 'react'
+
+const DynamicHomeSection = dynamic(() => import('@/components/Home'))
 
 const App : NextPage = () => {
   return (
-    <>
-     
-    </>
+    <Fragment>
+      <DynamicHomeSection />
+    </Fragment>
   )
 }
 
