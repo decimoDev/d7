@@ -1,20 +1,22 @@
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { FunctionComponent, Fragment, ReactNode } from 'react'
 import { Archivo } from '@next/font/google'
-import { LayoutProps } from '@/interfaces'
-import Box from '@/components/Box'
 
 const archivo = Archivo({
-  subsets : ['latin']
-})
+    subsets : ['latin']
+  })
 
 const Layout : FunctionComponent<LayoutProps> = ({children}) => {
   return (
-    <>
-        <main className={archivo.className}>
+    <Fragment>
+        <main id={archivo.className}>
             {children}
         </main>
-    </>
+    </Fragment>
   )
 }
 
 export default Layout
+
+interface LayoutProps {
+    children : ReactNode
+}
