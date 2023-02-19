@@ -13,7 +13,7 @@ const Title : FunctionComponent = () => {
       )
     }
   
-    else if (router.asPath == '/about/info') {
+    else if (router.asPath == '/info') {
       return (
         <Head>
           <title>Info</title>
@@ -21,18 +21,10 @@ const Title : FunctionComponent = () => {
       )
     }
   
-    else if (router.asPath == '/about/showcase') {
+    else if (router.asPath == '/projects') {
       return (
         <Head>
           <title>Project</title>
-        </Head>
-      )
-    }
-  
-    else if (router.asPath == '/about/contact') {
-      return (
-        <Head>
-          <title>Contact</title>
         </Head>
       )
     }

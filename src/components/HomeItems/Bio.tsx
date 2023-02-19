@@ -9,12 +9,14 @@ const Bio : FunctionComponent = () => {
             I&apos;m on a mission to best represent individuals&apos; interests in my vision and use of developments to turn them into a reality.
           </div>
           <div className='flex flex-col gap-3'>
-          <p className='mr-auto'>
-            I&apos;m on a mission to best represent individuals&apos; interests in my vision and use of developments to turn them into a reality.
-          </p>
-          <p className='ml-auto'>DECIMO©2023</p>
+          <div className='flex flex-col gap-3 w-full md:flex-row md:justify-between md:gap-[8rem]'>
+            <p className='mr-auto'>
+              I&apos;m on a mission to best represent individuals&apos; interests in my vision and use of developments to turn them into a reality.
+            </p>
+            <p className='ml-auto'>DECIMO©2023</p>
+          </div>
           <p className='ml-auto'>STUDENT AND DEVELOPER</p>
-          <p className='mr-auto'>MADE IN PHILIPPINES</p>
+          <p className='mr-auto'>BASED IN MANILA, PHILIPPINES</p>
           </div>
         </div>
         <div className='my-[1rem] px-[1rem] flex flex-row justify-between w-full'>
